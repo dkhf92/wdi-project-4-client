@@ -1,9 +1,9 @@
 angular
-  .module('PotatoApp')
-  .controller('UserCtrl', UserCtrl);
+.module('PotatoApp')
+.controller('UserCtrl', UserCtrl);
 
-UserCtrl.$inject = ['$http'];
-function UserCtrl($http){
+UserCtrl.$inject = ['$http', 'CurrentUserService', '$state'];
+function UserCtrl($http, CurrentUserService, $state){
   const vm = this;
 
   $http
@@ -12,5 +12,10 @@ function UserCtrl($http){
     vm.users = response.data;
 
     console.log(vm.users);
+
+    vm.logout = () => {
+      CurrentUserService.removeUser();
+      $state.go('login');
+    };
   });
 }
