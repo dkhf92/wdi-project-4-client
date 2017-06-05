@@ -2,7 +2,10 @@
   <h1>Register</h1>
   <div class="mv3">
     <label for="username">Username</label>
-    <input type="text" name="username" ng-model="register.user.username">
+    <input type="text" name="username" ng-model="register.user.username" required>
+  </div>
+  <div class="ng-message-error" ng-messages="register.registerForm.username.$error" ng-show="(register.registerForm.$submitted || register.registerForm.username.$touched)">
+    <p ng-message="required">This field is required</p>
   </div>
   <div class="mv3">
     <label class="db fw6 lh-copy f6" for="firstName">First Name</label>
@@ -14,7 +17,11 @@
   </div>
   <div class="mv3">
     <label class="db fw6 lh-copy f6" for="email">Email</label>
-    <input type="email" name="email" ng-model="register.user.email" ng-pattern="register.emailValidate">
+    <input type="email" name="email" ng-model="register.user.email" ng-pattern="register.emailValidate" required>
+  </div>
+  <div class="ng-message-error" ng-messages="register.registerForm.email.$error" ng-show="(register.registerForm.$submitted || register.registerForm.email.$touched)">
+    <p ng-message="required">This field is required</p>
+    <p ng-message="pattern">Please enter a valid email address</p>
   </div>
   <div class="mv3">
     <label class="db fw6 lh-copy f6" for="password">Password</label>
@@ -22,7 +29,7 @@
   </div>
   <div class="mv3">
     <label class="db fw6 lh-copy f6" for="passwordConfirmation">Password Confirmation</label>
-    <input class="pl pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="passwordConfirmation" ng-model="register.user.passwordConfirmation" ="Password confirmation" required ng-pattern="register.user.password">
+    <input class="pl pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="passwordConfirmation" ng-model="register.user.passwordConfirmation" required ng-pattern="register.user.password">
   </div>
   <input class="b ph3 pv2 input-reset ba bg-transparent grow pointer f6 dib apply-btn" type="submit" value="Register">
 </form>
