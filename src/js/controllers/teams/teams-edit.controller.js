@@ -17,8 +17,6 @@ function TeamsEditCtrl($stateParams, Team, $state, $location) {
     .$promise
     .then(() => {
       $state.go('teams');
-    // .then(team => {
-    //   $location.path(`/teams/all/${ team.id }`);
     })
     .catch(err => console.log(err));
   }
