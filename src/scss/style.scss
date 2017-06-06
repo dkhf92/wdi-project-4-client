@@ -64,10 +64,10 @@ figure:after {
 //   background: -webkit-radial-gradient(bottom, rgba(0, 0, 0, 0), #000000);
 //   -webkit-animation: rotateTop 10s infinite linear;
 // }
-// @-webkit-keyframes rotateTop {
-//   0% { -webkit-transform: rotateZ(0); }
-//   100% { -webkit-transform: rotateZ(360deg); }
-// }
+@-webkit-keyframes rotateTop {
+  0% { -webkit-transform: rotateZ(0); }
+  100% { -webkit-transform: rotateZ(360deg); }
+}
 
 .bottom {
   -webkit-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.7);
@@ -87,9 +87,36 @@ figure:after {
 //   background: url(http://s2.dmcdn.net/Ub1O8/1280x720-mCQ.jpg);
 // }
 .front {
-//   background: #e0e0e0 url(https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg) no-repeat;
-    background-color: lightgreen;
+  //   background: #e0e0e0 url(https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg) no-repeat;
+  background-color: lightgreen;
 }
 // figure {
 //   -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
 // }
+
+
+
+//
+.logo{
+  font-family: 'Baloo', cursive;
+  // text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+  &:hover{
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation:spin 4s linear infinite;
+    animation-duration: 800ms;
+    animation-name: spin;
+    -webkit-animation: spin 5s infinite;
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(360deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
