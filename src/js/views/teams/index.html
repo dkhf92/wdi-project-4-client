@@ -2,14 +2,13 @@
   <h1>Teams</h1>
 </div>
 
-
 <div class="team fl w-100 w-50-m w-25-ns pa1" ng-repeat="team in teams.teams">
   <div class="fl w-1 ph2 pv4 bg-red team-inner">
-    <a ui-sref="teamsShow({ id: team._id })"><h3>{{ team.name }}</h3></a>
-    <p>{{ team.description}}</p>
+    <a ui-sref="teamsShow({ id: team.id })"><h3>{{ team.name }}</h3></a>
+    <!-- <p>{{ team.description}}</p> -->
     <img ng-src="{{ team.image }}" style="margin:auto;">
     <div class="caption pt3">
-      <a class="f6 link dim br2 ba ph3 pv2 dib apply-btn" ui-sref="teamsShow({ id: team._id })">Apply</a>
+      <a class="f6 link dim br2 ba ph3 pv2 dib apply-btn" ui-sref="teamsShow({ id: team.id })">Apply</a>
     </div>
   </div>
 </div>

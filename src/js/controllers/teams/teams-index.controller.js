@@ -5,7 +5,7 @@ angular
 TeamsIndexCtrl.$inject = ['Team', 'CurrentUserService', '$state'];
 function TeamsIndexCtrl(Team, CurrentUserService, $state){
   const vm  = this;
-  vm.test   = 'hello';
+  // vm.test   = 'hello';
   // vm.delete = teamsDelete;
   // vm.teams = Team.query();
 
