@@ -21,7 +21,25 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     url: '/teams',
     templateUrl: '/js/views/teams/index.html',
     controller: 'TeamsIndexCtrl',
-    controllerAs: 'index'
+    controllerAs: 'teams'
+  })
+  .state('teamsNew', {
+    url: '/teams/new',
+    templateUrl: '/js/views/teams/new.html',
+    controller: 'TeamsNewCtrl',
+    controllerAs: 'teams'
+  })
+  .state('teamsShow', {
+    url: '/teams/show/:id',
+    templateUrl: '/js/views/teams/show.html',
+    controller: 'TeamsShowCtrl',
+    controllerAs: 'teams'
+  })
+  .state('teamsEdit', {
+    url: '/teams/:id/edit',
+    templateUrl: '/js/views/teams/edit.html',
+    controller: 'TeamsEditCtrl',
+    controllerAs: 'teams'
   })
   .state('register', {
     url: '/register',
