@@ -2,8 +2,8 @@ angular
 .module('PotatoApp')
 .controller('TeamsEditCtrl', TeamsEditCtrl);
 
-TeamsEditCtrl.$inject = ['$stateParams', 'Team', '$state', '$location'];
-function TeamsEditCtrl($stateParams, Team, $state, $location) {
+TeamsEditCtrl.$inject = ['$stateParams', 'Team', '$state'];
+function TeamsEditCtrl($stateParams, Team, $state) {
   const vm  = this;
   vm.team   = Team.get({ id: $stateParams.id });
   // vm.task = Task.get($stateParams);

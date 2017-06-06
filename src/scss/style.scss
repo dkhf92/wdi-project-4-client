@@ -10,6 +10,15 @@ h1 {
   text-align: center;
 }
 
+.ng-message-error p {
+  clear: both;
+  border: 1px solid #eb2e60;
+  background: lighten(#eb2e60, 30%);
+  padding: 5px;
+  border-radius: 5px;
+  color: #eb2e60;
+}
+
 // box
 .stage {
   width: 300px; height: 300px;
