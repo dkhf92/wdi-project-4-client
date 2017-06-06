@@ -11,7 +11,6 @@ function RegisterCtrl(User, CurrentUserService, $state){
     User
       .register(vm.user).$promise
       .then(data => {
-        console.log(data);
         CurrentUserService.getUser();
         $state.go('home');
       }, err => {

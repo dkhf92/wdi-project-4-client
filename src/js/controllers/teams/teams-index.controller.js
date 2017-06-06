@@ -6,18 +6,28 @@ TeamsIndexCtrl.$inject = ['Team', 'CurrentUserService', '$state'];
 function TeamsIndexCtrl(Team, CurrentUserService, $state){
   const vm  = this;
   vm.test   = 'hello';
-  vm.delete = teamsDelete;
-  // vm.teams = Team.query();
+  // vm.delete = teamsDelete;
+  vm.teams = Team.query();
 
-  function teamsDelete(activity) {
-    Team
-    .remove({ id: activity._id})
-    .$promise
-    .then(() => {
-      $state.go('teams');
-    });
-  }
+  // function teamsDelete(activity) {
+  //   Team
+  //   .remove({ id: activity._id})
+  //   .$promise
+  //   .then(() => {
+  //     $state.go('teams');
+  //   });
+  // }
 }
+
+
+
+
+
+
+
+
+
+
 
 
   // if(!vm.user) {

@@ -2,10 +2,9 @@ angular
 .module('PotatoApp')
 .factory('Team', Team);
 
-Team.$inject = ['$resource'];
-function Team($resource){
-
-  return $resource('/teams/:id', { id: '@_id'}, {
+Team.$inject = ['API', '$resource'];
+function Team(API, $resource){
+  return $resource(`${API}/teams/:id`, { id: '@_id'}, {
     'update': { method: 'PUT' }
   });
 }
