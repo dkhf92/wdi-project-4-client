@@ -2,17 +2,23 @@ angular
 .module('PotatoApp')
 .controller('UserCtrl', UserCtrl);
 
-UserCtrl.$inject = ['$http', 'CurrentUserService', '$state'];
-function UserCtrl($http, CurrentUserService, $state){
+UserCtrl.$inject = ['$http', 'CurrentUserService', '$state', '$rootScope'];
+function UserCtrl($http, CurrentUserService, $state, $rootScope){
   const vm = this;
 
-  // $http
-  // .get('http://localhost:3000/api/users')
-  // .then(response => {
-  //   vm.users = response.data;
-  //   vm.logout = () => {
-  //     CurrentUserService.removeUser();
-  //     $state.go('login');
-  //   };
+  // CurrentUserService.getUser();
+  // $rootScope.$on('LoggedIn', () => {
+  //   vm.user = CurrentUserService.currentUser;
+  //   vm.loggedIn = true;
   // });
+  // vm.logout = () => {
+  //   vm.loggedIn = false;
+  //   CurrentUserService.removeUser();
+  // };
+  // $rootScope.$on('LoggedOut', () => {
+  //   vm.user = null;
+  //   $state.go('home');
+  // });
+  //
+  // console.log('**********', vm.user);
 }
