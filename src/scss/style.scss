@@ -1,11 +1,38 @@
 // Import all of your scss files here
 
 body {
-  // background-color: yellow;
+  // background: white; /* For browsers that do not support gradients */
+  // background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
+  // background: -o-linear-gradient(black, white); /* For Opera 11.1 to 12.0 */
+  // background: -moz-linear-gradient(black, white); /* For Firefox 3.6 to 15 */
+  // background: linear-gradient(black, white); /* Standard syntax */
+
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgba(255,0,0,0),black); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(255,0,0,0),black); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(255,0,0,0),black); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(255,0,0,0), black); /*Standard*/
+}
+
+.theCube {
+  margin-top: 100px;
+}
+.registerButton {
+  padding-top: 75px;
+  padding-left: 45px;
+}
+
+.potato {
+  padding: 300px;
+  float: left;
+}
+
+.team-inner {
+  text-align: center;
 }
 
 h1 {
-  color: lightgreen;
+  color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px green;
   text-align: center;
 }
@@ -97,7 +124,7 @@ figure:after {
 // }
 .front {
   //   background: #e0e0e0 url(https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg) no-repeat;
-  background-color: lightgreen;
+  background-color: white;
 }
 // figure {
 //   -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
@@ -107,7 +134,7 @@ figure:after {
 
 //
 .logo{
-  font-family: 'Baloo', cursive;
+  // font-family: 'Baloo', cursive;
   // text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
   &:hover{
     -webkit-animation-name: spin;

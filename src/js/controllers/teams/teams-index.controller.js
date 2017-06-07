@@ -2,8 +2,8 @@ angular
 .module('PotatoApp')
 .controller('TeamsIndexCtrl', TeamsIndexCtrl);
 
-TeamsIndexCtrl.$inject = ['Team', 'CurrentUserService', '$state'];
-function TeamsIndexCtrl(Team, CurrentUserService, $state){
+TeamsIndexCtrl.$inject = ['Team', 'CurrentUserService', '$state', 'filterFilter', '$rootScope'];
+function TeamsIndexCtrl(Team, CurrentUserService, $state, filterFilter, $rootScope){
   const vm  = this;
   // vm.test   = 'hello';
   // vm.delete = teamsDelete;
@@ -16,102 +16,95 @@ function TeamsIndexCtrl(Team, CurrentUserService, $state){
     vm.teams = teams;
     console.log(teams);
   });
-}
 
-
-
-
-
-
-
-
-
-
-// function teamsDelete(activity) {
-//   Team
-//   .remove({ id: activity._id})
-//   .$promise
-//   .then(() => {
-//     $state.go('teams');
-//   });
-// }
-
+  // function teamsDelete(activity) {
+  //   Team
+  //   .remove({ id: activity._id })
+  //   .$promise
+  //   .then(() => {
+  //     $state.go('teamsIndex');
+  //   });
+  // }
+  //
   // if(!vm.user) {
   //   $rootScope.$on('loggedIn', () => {
   //     vm.user = CurrentUserService.currentUser;
-  //     filterTasks();
+  //     filterTeams();
   //   });
   // } else {
-  //   filterTasks();
+  //   filterTeams();
   // }
   //
-  // function filterTasks() {
-  //   createdTasks();
-  //   availableTasks();
-  //   requestedTasks();
-  //   assignedTasks();
+  //
+  // function filterTeams() {
+  //   createdTeams();
+  //   availableTeams();
+  //   requestedTeams();
+  //   assignedTeams();
   // }
-  // $rootScope.$on('taskCreated', () => {
-  //   filterTasks();
+  // $rootScope.$on('teamCreated', () => {
+  //   filterTeams();
   // });
-
-  // function availableTasks() {
+  //
+  // function availableTeams() {
   //   const params = { createdBy: '!' + vm.user._id };
-  //   Task
+  //   Team
   //   .query()
   //   .$promise
-  //   .then(tasks => {
-  //     const all = filterFilter(tasks, params);
+  //   .then(teams => {
+  //     const all = filterFilter(teams, params);
   //     const available = [];
-  //     all.forEach(task => {
-  //       if (task.requestedBy.length === 0) {
-  //         available.push(task);
+  //     all.forEach(team => {
+  //       if (team.requestedBy.length === 0) {
+  //         available.push(team);
   //       } else {
-  //         if (task.requestedBy.find(x => x.user._id === vm.user._id)) {
-  //           console.log('Task already requested by user ', task);
-  //         } else available.push(task);
+  //         if (team.requestedBy.find(x => x.user._id === vm.user._id)) {
+  //           console.log('Team already requested by user ', team);
+  //         } else available.push(team);
   //       }
   //     });
   //     vm.available = available;
   //   });
   // }
   //
-  // function createdTasks() {
+  // function createdTeams() {
   //   const params = { createdBy: vm.user._id };
-  //   Task
+  //   Team
   //   .query()
   //   .$promise
-  //   .then(tasks => {
-  //     vm.created = filterFilter(tasks, params);
+  //   .then(teams => {
+  //     vm.created = filterFilter(teams, params);
   //   });
   // }
   //
-  // function requestedTasks() {
-  //   Task
+  // function requestedTeams() {
+  //   Team
   //   .query()
   //   .$promise
-  //   .then(tasks => {
+  //   .then(teams => {
   //     const requested = [];
-  //     tasks.forEach(task => {
-  //       if(task.requestedBy.find(x => x.user._id === vm.user._id)) {
-  //         requested.push(task);
+  //     teams.forEach(team => {
+  //       if(team.requestedBy.find(x => x.user._id === vm.user._id)) {
+  //         requested.push(team);
   //       }
   //     });
   //     vm.requested = requested;
   //   });
   // }
   //
-  // function assignedTasks() {
-  //   Task
+  // function assignedTeams() {
+  //   Team
   //   .query()
   //   .$promise
-  //   .then(tasks => {
+  //   .then(teams => {
   //     const assigned = [];
-  //     tasks.forEach(task => {
-  //       if(task.assignedTo.find(x => x === vm.user._id)) {
-  //         assigned.push(task);
+  //     teams.forEach(team => {
+  //       if(team.assignedTo.find(x => x === vm.user._id)) {
+  //         assigned.push(team);
   //       }
   //     });
   //     vm.assigned = assigned;
   //   });
   // }
+
+}

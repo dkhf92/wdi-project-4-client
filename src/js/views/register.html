@@ -1,23 +1,23 @@
-<form ng-submit="register.register()" name="register.registerForm">
+<form ng-submit="register.register()" class="measure center" name="register.registerForm">
   <h1>Register</h1>
   <div class="mv3">
     <label for="username">Username</label>
-    <input type="text" name="username" ng-model="register.user.username" required>
+    <input class="pl pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="username" ng-model="register.user.username" required>
   </div>
   <div class="ng-message-error" ng-messages="register.registerForm.username.$error" ng-show="(register.registerForm.$submitted || register.registerForm.username.$touched)">
     <p ng-message="required">This field is required</p>
   </div>
   <div class="mv3">
     <label class="db fw6 lh-copy f6" for="firstName">First Name</label>
-    <input type="text" name="firstName" ng-model="register.user.firstName">
+    <input class="pl pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="firstName" ng-model="register.user.firstName">
   </div>
   <div class="mv3">
     <label class="db fw6 lh-copy f6" for="lastName">Last Name</label>
-    <input type="text" name="lastName" ng-model="register.user.lastName">
+    <input class="pl pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="lastName" ng-model="register.user.lastName">
   </div>
   <div class="mv3">
     <label class="db fw6 lh-copy f6" for="email">Email</label>
-    <input type="email" name="email" ng-model="register.user.email" ng-pattern="register.emailValidate" required>
+    <input class="pl pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email" ng-model="register.user.email" ng-pattern="register.emailValidate" required>
   </div>
   <div class="ng-message-error" ng-messages="register.registerForm.email.$error" ng-show="(register.registerForm.$submitted || register.registerForm.email.$touched)">
     <p ng-message="required">This field is required</p>
@@ -25,7 +25,7 @@
   </div>
   <div class="mv3">
     <label class="db fw6 lh-copy f6" for="password">Password</label>
-    <input type="password" name="password" ng-model="register.user.password">
+    <input class="pl pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password" ng-model="register.user.password">
   </div>
   <div class="ng-message-error" ng-messages="register.registerForm.password.$error" ng-show="(register.registerForm.$submitted || register.registerForm.password.$touched)">
     <p ng-message="required">This field is required</p>
@@ -39,5 +39,5 @@
     <p ng-message="required">This field is required</p>
     <p ng-message="pattern">This must match your password</p>
   </div>
-  <input class="b ph3 pv2 input-reset ba bg-transparent grow pointer f6 dib apply-btn" type="submit" value="Register">
+  <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib apply-btn" type="submit" value="Register">
 </form>
