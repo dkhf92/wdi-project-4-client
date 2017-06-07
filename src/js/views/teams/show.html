@@ -8,11 +8,19 @@
     <p>{{ teams.teams.description }}</p>
     <div class="caption pt3">
       <!-- <a class="f6 link dim br2 ba ph3 pv2 dib apply-btn">I want to play</a> -->
+      <a class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" ng-click="teams.request(teams.teams.id)">Request</a>
       <a class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" ui-sref="teamsEdit({ id: teams.teams.id })">Edit</a>
       <a class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" ui-sref="teams">Back</a>
       <!-- <button ng-disabled="teamsShow.canRequest(teamsShow.team.requestedBy, teamsShow)" class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" ng-click="teamsShow.request()" type="button" name="button">Request this team</button> -->
     </div>
   </div>
+
+  <ul>
+    <li ng-repeat="request in teams.teams.requests track by $index">
+      {{ request }}
+      <button ng-click="teams.accept(request)">Accept</button>
+      <button ng-click="teams.reject(request)">reject</button>
+    </li>
 </div>
 <!-- </div> -->
 <!-- </div> -->

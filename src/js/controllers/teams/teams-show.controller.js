@@ -10,12 +10,42 @@ function TeamsShowCtrl(Team, $state, $stateParams){
   // console.log(vm.user);
   // vm.team = Team.get($stateParams);
 
-  Team.get({ id: $stateParams.id })
-  .$promise
-  .then(team => {
-    console.log(team);
-    vm.teams = team;
-  });
+  getTeam();
+
+  function getTeam() {
+    Team.get({ id: $stateParams.id })
+    .$promise
+    .then(team => {
+      console.log(team);
+      vm.teams = team;
+    });
+  }
+
+  vm.request = function(id) {
+    Team.request({ team_id: id })
+    .$promise
+    .then(data => {
+      console.log(data);
+    });
+  };
+
+  vm.accept = function(request) {
+    Team.accept({ team_id: request.team_id, id: request.id })
+    .$promise
+    .then(data => {
+      console.log(data);
+      getTeam();
+    });
+  };
+
+  vm.reject = function(request) {
+    Team.reject({ team_id: request.team_id, id: request.id })
+    .$promise
+    .then(data => {
+      console.log(data);
+      getTeam();
+    });
+  };
 
   vm.delete = teamsDelete;
   function teamsDelete(team) {
