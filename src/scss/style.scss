@@ -3,6 +3,8 @@
 @import "more";
 
 body {
+  // font-family: 'Bubbler One', sans-serif;
+  font-family: 'BenchNine', sans-serif;
   // background: white; /* For browsers that do not support gradients */
   // background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
   // background: -o-linear-gradient(black, white); /* For Opera 11.1 to 12.0 */
@@ -17,6 +19,9 @@ body {
 }
 a {
   color: black;
+}
+p {
+  font-size: 25px;
 }
 .theCube {
   margin-top: 100px;
@@ -33,12 +38,19 @@ a {
 
 .team-inner {
   text-align: center;
+  &:hover {
+    background: blue;
+  }
 }
 
 h1 {
   color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px green;
   text-align: center;
+  font-size: 50px;
+}
+h3 {
+  font-size: 25px;
 }
 
 .ng-message-error p {
