@@ -1,0 +1,171 @@
+// *********************************************BOX*****************************
+.theCube {
+  margin-top: 100px;
+}
+
+.stage {
+  width: 300px; height: 300px;
+  -webkit-perspective: 1600px;
+  -webkit-perspective-origin: 50% -240px;
+}
+
+figure {
+  display: block; position: absolute;
+  width: 300px; height: 300px;
+  background-color: #60c2ef;
+}
+
+.cube { -webkit-transform-style: preserve-3d; }
+figure { -webkit-transform-origin: 50% 50% 0; }
+.front { -webkit-transform: translateZ(150px); }
+.back { -webkit-transform: rotateY(180deg) translateZ(150px); }
+.top { -webkit-transform: rotateX(90deg) translateZ(150px); }
+.bottom { -webkit-transform: rotateX(-90deg) translateZ(150px); }
+.left { -webkit-transform: rotateY(-90deg) translateZ(150px); }
+.right { -webkit-transform: rotateY(90deg) translateZ(150px); }
+
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotateY(0); }
+  100% { -webkit-transform: rotateY(360deg); }
+}
+.cube { -webkit-animation: rotate 10s infinite linear; }
+
+figure:before, figure:after {
+  content: ""; display: block; position: absolute;
+  width: 100%; height: 100%; opacity: 0;
+}
+figure:before {
+  background: -webkit-radial-gradient(top left, rgba(0, 0, 0, 0.5), #000000);
+}
+figure:after {
+  background: -webkit-radial-gradient(top right, rgba(0, 0, 0, 0.5), #000000);
+}
+
+.front:before { -webkit-animation: frontShading1 10s infinite linear; }
+
+@-webkit-keyframes frontShading1 {
+  2% { opacity: 0; }
+  25% { opacity: 0.8; }
+  35% { opacity: 0.8; }
+  50% { opacity: 0; }
+}
+
+// .top:after {
+//   opacity: 0.5; width: 200%; height: 200%;
+//   margin-left: -50%; margin-top: -50%;
+//   background: -webkit-radial-gradient(bottom, rgba(0, 0, 0, 0), #000000);
+//   -webkit-animation: rotateTop 10s infinite linear;
+// }
+// @-webkit-keyframes rotateTop {
+//   0% { -webkit-transform: rotateZ(0); }
+//   100% { -webkit-transform: rotateZ(360deg); }
+// }
+
+.bottom {
+  -webkit-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+figure {
+  // background-image: url(https://media.giphy.com/media/2HavnYT1BfENa/giphy.gif);
+  // background-size: 100%;
+  // max-height: 100%;
+  // max-width: 100%;
+  // height: auto;
+  // width: auto;
+  // object-fit: contain;
+}
+.top {
+  // background-image: url(https://i.ytimg.com/vi/prALrHUJ8Ns/hqdefault.jpg);
+  background: lightgrey;
+  // background: white; /* For browsers that do not support gradients */
+  // background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
+  // background: -o-linear-gradient(black, white); /* For Opera 11.1 to 12.0 */
+  // background: -moz-linear-gradient(black, white); /* For Firefox 3.6 to 15 */
+  // background: linear-gradient(black, white); /* Standard syntax */
+}
+
+// figure {
+//   background-color: #eeeeee;
+//   background: url(http://s2.dmcdn.net/Ub1O8/1280x720-mCQ.jpg);
+// }
+.front {
+  //   background: #e0e0e0 url(https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg) no-repeat;
+  // background-color: white;
+  background-image: url(https://media.giphy.com/media/2HavnYT1BfENa/giphy.gif);
+  // background-size: cover;
+  // background-size: 100%;
+  //  background-size: 175%;
+  //  background-size: 300px;
+  // max-height: 100%;
+  // max-width: 100%;
+  // height: auto;
+  // width: auto;
+  // height: 300px;
+  // width: 300px;
+  // object-fit: contain;
+}
+// figure {
+//   -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+// }
+
+// ********************************SPIN*****************************************
+
+.logo{
+  // font-family: 'Baloo', cursive;
+  // text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+  &:hover{
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation:spin 4s linear infinite;
+    animation-duration: 800ms;
+    animation-name: spin;
+    -webkit-animation: spin 5s infinite;
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(360deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+
+
+
+// ********************************BLINK*****************************************
+.requests {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  // border: 5px solid $gold;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+&:hover{
+   box-shadow: 3px 3px 5px grey;
+   // text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+   animation-duration: 800ms;
+   animation-name: fadeIn;
+   // color: white;
+ }
+}
+
+@keyframes fadeIn {
+ 0% {
+   opacity: 0;
+ }
+ 80% {
+   opacity: 0.5;
+ }
+ 100% {
+   opacity: 1;
+ }
+}

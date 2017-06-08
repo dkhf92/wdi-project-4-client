@@ -11,12 +11,6 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     url: '/',
     templateUrl: '/js/views/home.html'
   })
-  // .state('userIndex', {
-  //   url: '/users',
-  //   templateUrl: '/js/views/users.html',
-  //   controller: 'UserCtrl',
-  //   controllerAs: 'user'
-  // })
   .state('teams', {
     url: '/teams',
     templateUrl: '/js/views/teams/index.html',
@@ -52,18 +46,6 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     templateUrl: '/js/views/login.html',
     controller: 'LoginCtrl',
     controllerAs: 'login'
-  // })
-  // .state('posts', {
-  //   url: '/posts',
-  //   templateUrl: '/js/views/posts/index.html',
-  //   controller: 'postCtrl',
-  //   controllerAs: 'post'
-  // })
-  // .state('newPost', {
-  //   url: '/posts/new',
-  //   templateUrl: '/js/views/posts/new-post.html',
-  //   controller: 'NewCtrl',
-  //   controllerAs: 'post'
   });
   $urlRouterProvider.otherwise('/');
 }

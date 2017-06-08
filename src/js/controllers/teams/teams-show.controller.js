@@ -6,10 +6,6 @@ TeamsShowCtrl.$inject = ['Team', '$state', '$stateParams'];
 function TeamsShowCtrl(Team, $state, $stateParams){
   const vm  = this;
 
-  // vm.user = CurrentUserService.currentUser;
-  // console.log(vm.user);
-  // vm.team = Team.get($stateParams);
-
   getTeam();
 
   function getTeam() {
