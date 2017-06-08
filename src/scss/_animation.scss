@@ -4,9 +4,9 @@
 }
 
 .stage {
-  width: 300px; height: 300px;
+  width: 1500px; height: 1500px;
   -webkit-perspective: 1600px;
-  -webkit-perspective-origin: 50% -240px;
+  -webkit-perspective-origin: 60% -250px;
 }
 
 figure {
@@ -74,10 +74,13 @@ figure {
   // height: auto;
   // width: auto;
   // object-fit: contain;
+  // height: 500px;
+  // width: 500px;
 }
 .top {
   // background-image: url(https://i.ytimg.com/vi/prALrHUJ8Ns/hqdefault.jpg);
   background: lightgrey;
+  background: url(http://www.wilsongreens.com/wp-content/uploads/2016/11/Grass.jpg);
   // background: white; /* For browsers that do not support gradients */
   // background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
   // background: -o-linear-gradient(black, white); /* For Opera 11.1 to 12.0 */
@@ -105,22 +108,29 @@ figure {
   // width: 300px;
   // object-fit: contain;
 }
+.right {
+  background-image: url(http://www.uefa.com/MultimediaFiles/Photo/competitions/Comp_Matches/02/32/85/18/2328518_w2.jpg);
+}
 // figure {
 //   -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
 // }
 
+
+
+
+
 // ********************************SPIN*****************************************
 
-.logo{
+.spin{
   // font-family: 'Baloo', cursive;
   // text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
   &:hover{
     -webkit-animation-name: spin;
-    -webkit-animation-duration: 4000ms;
+    -webkit-animation-duration: 1000ms;
     -webkit-animation:spin 4s linear infinite;
     animation-duration: 800ms;
     animation-name: spin;
-    -webkit-animation: spin 5s infinite;
+    -webkit-animation: spin 2s infinite;
   }
 }
 @keyframes spin {
@@ -140,21 +150,21 @@ figure {
 
 
 // ********************************BLINK*****************************************
+
 .requests {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  border-top-left-radius: 0;
-  // border: 5px solid $gold;
+  // width: 100%;
+  // height: 100%;
+     width: 390px;
+  // border-radius: 10px;
+  // border-top-left-radius: 0;
   text-align: center;
-  margin: 0 auto;
-  position: relative;
+  // margin: 0 auto;
+  // position: relative;
 &:hover{
-   box-shadow: 3px 3px 5px grey;
-   // text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-   animation-duration: 800ms;
+   box-shadow: 3px 3px 5px black;
+  //  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+   animation-duration: 1000ms;
    animation-name: fadeIn;
-   // color: white;
  }
 }
 

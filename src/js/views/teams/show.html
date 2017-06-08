@@ -1,6 +1,4 @@
 <h1>{{ teams.teams.name }}</h1>
-<!-- <div class="potato">
-</div> -->
 <!-- <div class="measure center fl w-100 w-40-ns pa4 pt1 cf bg-white relative br3"> -->
 <div class="dib pa1">
   <div class="fl w-1 ph2 pv4 bg-white team-inner">
@@ -15,30 +13,30 @@
     </div>
   </div>
 
-  <div class="dib pa1">
+  <div class="dib pa1 ml1">
     <div class="fl requests w-1 ph2 pv4 bg-white">
       <p>These players have requested to join:</p>
       <ul>
         <li ng-repeat="request in teams.teams.requests track by $index">
           <p>{{ request.user.username }}
-          <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.accept(request)">Accept</button>
-          <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.reject(request)">reject</button>
+            <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.accept(request)">Accept</button>
+            <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.reject(request)">reject</button>
           </p>
         </li>
       </ul>
     </div>
   </div>
 
-  <div class="dib pa1">
+  <!-- <div class="dib pa1">
     <div class="fl requests w-1 ph2 pv4 bg-white">
       <p>Team players: </p>
       <ul>
         <li ng-repeat="request in teams.teams.requests track by $index">
           <p>{{ request.user.username }}
-          <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.accept(request)">Accept</button>
-          <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.reject(request)">reject</button>
+            <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.accept(request)">Accept</button>
+            <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.reject(request)">reject</button>
           </p>
         </li>
       </ul>
     </div>
-  </div>
+  </div> -->

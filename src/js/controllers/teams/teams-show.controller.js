@@ -52,4 +52,36 @@ function TeamsShowCtrl(Team, $state, $stateParams){
       $state.go('teams');
     });
   }
+
+  // *****************************
+//   requestedTeams();
+//   function requestedTeams() {
+//     Team
+//     .query()
+//     .$promise
+//     .then(tasks => {
+//       const requested = [];
+//       tasks.forEach(team => {
+//         if(team.requestedBy.find(creator => creator.user._id === vm.user._id)) {
+//           requested.push(team);
+//         }
+//       });
+//       vm.requested = requested;
+//     });
+//   }
+//   assignedTeams();
+//   function assignedTeams() {
+//     Team
+//     .query()
+//     .$promise
+//     .then(teams => {
+//       const assigned = [];
+//       teams.forEach(team => {
+//         if(team.assignedTo.find(creator => creator === vm.user._id)) {
+//           assigned.push(team);
+//         }
+//       });
+//       vm.assigned = assigned;
+//     });
+//   }
 }
