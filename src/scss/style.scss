@@ -5,23 +5,30 @@
 body {
   // font-family: 'Bubbler One', sans-serif;
   font-family: 'BenchNine', sans-serif;
+  background: grey;
+  // background: url(https://media.giphy.com/media/Ku3vv22AHSXte/giphy.gif);
   // background: white; /* For browsers that do not support gradients */
   // background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
   // background: -o-linear-gradient(black, white); /* For Opera 11.1 to 12.0 */
   // background: -moz-linear-gradient(black, white); /* For Firefox 3.6 to 15 */
   // background: linear-gradient(black, white); /* Standard syntax */
 
-  background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left,rgba(255,0,0,0),#7C7A7A); /*Safari 5.1-6*/
-  background: -o-linear-gradient(right,rgba(255,0,0,0),#7C7A7A); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(right,rgba(255,0,0,0),#7C7A7A); /*Fx 3.6-15*/
-  background: linear-gradient(to right, rgba(255,0,0,0), #7C7A7A); /*Standard*/
+  // background: red; /* For browsers that do not support gradients */
+  // background: -webkit-linear-gradient(left,rgba(255,0,0,0),#7C7A7A); /*Safari 5.1-6*/
+  // background: -o-linear-gradient(right,rgba(255,0,0,0),#7C7A7A); /*Opera 11.1-12*/
+  // background: -moz-linear-gradient(right,rgba(255,0,0,0),#7C7A7A); /*Fx 3.6-15*/
+  // background: linear-gradient(to right, rgba(255,0,0,0), #7C7A7A); /*Standard*/
 }
 a {
   color: black;
 }
 p {
   font-size: 25px;
+  // list-style-type: none;
+  // list-style: none;
+}
+ul {
+  list-style-type: none;
 }
 .theCube {
   margin-top: 100px;
@@ -39,7 +46,7 @@ p {
 .team-inner {
   text-align: center;
   &:hover {
-    background: blue;
+    background: red;
   }
 }
 
@@ -127,11 +134,22 @@ figure:after {
 }
 
 figure {
-  background-image: url(https://pbs.twimg.com/profile_images/502608767574638594/vxHUeun6_400x400.jpeg);
-  background-size: 100%;
+  // background-image: url(https://media.giphy.com/media/2HavnYT1BfENa/giphy.gif);
+  // background-size: 100%;
+  // max-height: 100%;
+  // max-width: 100%;
+  // height: auto;
+  // width: auto;
+  // object-fit: contain;
 }
 .top {
-  background-image: url(https://i.ytimg.com/vi/prALrHUJ8Ns/hqdefault.jpg);
+  // background-image: url(https://i.ytimg.com/vi/prALrHUJ8Ns/hqdefault.jpg);
+  background: lightgrey;
+  // background: white; /* For browsers that do not support gradients */
+  // background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
+  // background: -o-linear-gradient(black, white); /* For Opera 11.1 to 12.0 */
+  // background: -moz-linear-gradient(black, white); /* For Firefox 3.6 to 15 */
+  // background: linear-gradient(black, white); /* Standard syntax */
 }
 
 // figure {
@@ -140,7 +158,18 @@ figure {
 // }
 .front {
   //   background: #e0e0e0 url(https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg) no-repeat;
-  background-color: white;
+  // background-color: white;
+  background-image: url(https://media.giphy.com/media/2HavnYT1BfENa/giphy.gif);
+  // background-size: 100%;
+  //  background-size: 175%;
+  //  background-size: 300px;
+  // max-height: 100%;
+  // max-width: 100%;
+  // height: auto;
+  // width: auto;
+  // height: 300px;
+  // width: 300px;
+  // object-fit: contain;
 }
 // figure {
 //   -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));

@@ -2,23 +2,59 @@
 <div class="potato">
 </div>
 <!-- <div class="measure center fl w-100 w-40-ns pa4 pt1 cf bg-white relative br3"> -->
-<div class="team fl w-100 w-50-m w-25-ns pa1">
+<div class="fl w-100 w-50-m w-25-ns pa1">
   <div class="fl w-1 ph2 pv4 bg-white team-inner">
+    <p>Team Captain: {{ teams.teams.creator.username }}</p>
     <img class="" ng-src="{{ teams.teams.image }}" style="margin:auto;">
     <p>{{ teams.teams.description }}</p>
     <div class="caption pt3">
-      <a class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.request(teams.teams.id)">Request</a>
+
+      <a ng-hide="teams.teams.creator.id === user.user.id" class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.request(teams.teams.id)">Request</a>
       <a class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ui-sref="teamsEdit({ id: teams.teams.id })">Edit</a>
       <a class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ui-sref="teams">Back</a>
     </div>
   </div>
 
-  <ul>
+  <div class="fl w-100 w-50-m w-25-ns pa1">
+    <div class="fl w-1 ph2 pv4 bg-white team-inner">
+      <p>These players have requested to join</p>
+      <ul>
+        <li ng-repeat="request in teams.teams.requests track by $index">
+          <p>{{ request.user.username }}</p>
+          <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.accept(request)">Accept</button>
+          <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.reject(request)">reject</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- <ul>
     <li ng-repeat="request in teams.teams.requests track by $index">
-      {{ request }}
-      <button ng-click="teams.accept(request)">Accept</button>
-      <button ng-click="teams.reject(request)">reject</button>
+      <p>{{ request.user.username }}</p>
+      <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.accept(request)">Accept</button>
+      <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.reject(request)">reject</button>
     </li>
-</div>
-<!-- </div> -->
-<!-- </div> -->
+  </ul> -->
+
+  <!-- <ul>
+  <li ng-repeat="request in teams.teams.requestedBy track by $index">
+  <!-- {{ request.user.username }} -->
+  <!-- <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.accept(request)">Accept</button>
+  <button class="b pa3 mv3 pv2 input-reset ba b--black bg-transparent grow pointer f5 dib no-underline" ng-click="teams.reject(request)">reject</button>
+</li>
+</ul> -->
+
+<!-- <div ng-if="teams.teams.createdBy === teams.user._id" class="relative pb2">
+<div ng-if="teams.teams.requestedBy[0]">
+<p>Requested by these users:</p>
+<ul>
+<li ng-repeat="request in teams.teams.requestedBy track by $index">
+<p>{{ request.user.username }}
+<button class="pa1 ma1" ng-show="teams.team.createdBy === teams.user._id"
+ng-click="teams.assign(request.user, $index)"
+type="button" name="button">Assign</button>
+<button ng-show="teams.team.createdBy === teams.user._id"
+ng-click="teams.reject(request.user, $index)"
+type="button" name="button" class="pa1 ma1">Reject</button></p></li>
+</ul>
+</div> -->

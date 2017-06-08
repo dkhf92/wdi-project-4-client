@@ -49,67 +49,80 @@
   animation-fill-mode:forwards;
 }
 
-// .person1
-// {
-// 	position: absolute;
-// 	top: 100px;
-// 	left: 280px;
-// 	background: url('http://www.viewsoniceurope.com/worldcup/en/images/p1.png') no-repeat center left;
-// 	width: 213px;
-// 	height: 228px;
-// 	opacity: 0;
-// 	animation:person1 1s ease-in 1s normal 1;
-// 	animation-fill-mode:forwards;
-// }
+.moveingball3
+{
+  position: absolute;
+  background: url('http://www.viewsoniceurope.com/worldcup/en/images/soccer.png') no-repeat center;
+  background-size:100% 100%;
+  width: 145px;
+  height: 145px;
+  opacity: 0;
+  z-index: 4;
+  animation:moveingball3 2s ease-in 2s normal 1;
+  animation-fill-mode:forwards;
+}
 
-// .person2
-// {
-// 	position: absolute;
-// 	top: 100px;
-// 	left: 460px;
-// 	background: url('http://www.viewsoniceurope.com/worldcup/en/images/p2.png') no-repeat center left;
-// 	width: 208px;
-// 	height: 252px;
-// 	opacity: 0;
-// 	animation: person2 1s ease-in 1s normal 1;
-// 	animation-fill-mode: forwards;
-// }
+.moveingball4
+{
+	position: absolute;
+	top: 100px;
+	left: 280px;
+	background: url('http://www.viewsoniceurope.com/worldcup/en/images/soccer.png') no-repeat center left;
+	width: 213px;
+	height: 228px;
+	opacity: 0;
+	animation:moveingball4 1s ease-in 1s normal 1;
+	animation-fill-mode:forwards;
+}
 
-// .pjd5533w-light
-// {
-// 	position: absolute;
-// 	top: 250px;
-// 	left: 0px;
-// 	background: url('http://www.viewsoniceurope.com/worldcup/en/images/jersey.png') no-repeat center left;
-// 	width: 450px;
-// 	height: 300px;
-// 	opacity: 0;
-// 	animation: pjd5533w 1s ease-in 5s normal 1;
-// 	animation-fill-mode: forwards;
-// }
+.moveingball5
+{
+	position: absolute;
+	top: 100px;
+	left: 460px;
+	background: url('http://www.viewsoniceurope.com/worldcup/en/images/soccer.png') no-repeat center left;
+	width: 208px;
+	height: 252px;
+	opacity: 0;
+	animation: moveingball5 1s ease-in 1s normal 1;
+	animation-fill-mode: forwards;
+}
 
-// .pjd7820hd-light
-// {
-// 	position: absolute;
-// 	top: 200px;
-// 	left: 500px;
-// 	background: url('http://www.viewsoniceurope.com/worldcup/en/images/pjd7820hd-light.png') no-repeat center left;
-// 	width: 499px;
-// 	height: 362px;
-// 	opacity: 0;
-// 	animation: pjd7820hd 1s ease-in 7s normal 1;
-// 	animation-fill-mode: forwards;
-// }
+.moveingball6
+{
+	position: absolute;
+	top: 250px;
+	left: 0px;
+	background: url('http://www.viewsoniceurope.com/worldcup/en/images/soccer.png') no-repeat center left;
+	width: 450px;
+	height: 300px;
+	opacity: 0;
+	animation: moveingball6 1s ease-in 5s normal 1;
+	animation-fill-mode: forwards;
+}
 
-// .pjd7820hd-btn
-// {
-// 	position: absolute;
-// 	top: 220px;
-// 	left: 800px;
-// 	opacity: 0;
-// 	animation: pjd7820hd-btn 1s ease-in 8s normal 1;
-// 	animation-fill-mode: forwards;
-// }
+.moveingball7
+{
+	position: absolute;
+	top: 200px;
+	left: 500px;
+	background: url('http://www.viewsoniceurope.com/worldcup/en/images/soccer.png') no-repeat center left;
+	width: 499px;
+	height: 362px;
+	opacity: 0;
+	animation: moveingball7 1s ease-in 7s normal 1;
+	animation-fill-mode: forwards;
+}
+
+.moveingball7-btn
+{
+	position: absolute;
+	top: 220px;
+	left: 800px;
+	opacity: 0;
+	animation: moveingball7-btn 1s ease-in 8s normal 1;
+	animation-fill-mode: forwards;
+}
 
 /* Standard syntax */
 @keyframes moveingball
@@ -125,42 +138,48 @@
   50%  {right:150px; top:140px;transform:rotate(540deg); opacity: 0.3; width: 50px; height: 50px;}
   100% {right:400px; top:430px;transform:rotate(1000deg); opacity: 1; width: 170px; height: 170px;}
 }
+@keyframes moveingball3
+{
+  0%   {right:500px; top:80px; transform: rotate(0deg); opacity: 0; width: 30px; height: 30px;}
+  50%  {right:450px; top:140px;transform:rotate(540deg); opacity: 0.3; width: 50px; height: 50px;}
+  100% {right:350px; top:430px;transform:rotate(1000deg); opacity: 1; width: 170px; height: 170px;}
+}
 
-// @keyframes person1
-// {
-// 0%   {left:-200px; opacity: 0;}
-// 100% {left:280px; opacity: 1;}
-// }
+@keyframes moveingball4
+{
+0%   {left:-200px; opacity: 0;}
+100% {left:280px; opacity: 1;}
+}
 //
-// @keyframes person2
-// {
-// 0%   {left:900px; opacity: 0;}
-// 100% {left:460px; opacity: 1;}
-// }
-//
-// @keyframes pjd5533w
-// {
-// 0%   {left:-200px; opacity: 0;}
-// 100% {left:0px; opacity: 1;}
-// }
-//
-// @keyframes pjd5533w-btn
-// {
-// 0%   {left:-200px; opacity: 0;}
-// 100% {left:50px; opacity: 1;}
-// }
-//
-// @keyframes pjd7820hd
-// {
-// 0%   {left:900px; opacity: 0;}
-// 100% {left:500px; opacity: 1;}
-// }
-//
-// @keyframes pjd7820hd-btn
-// {
-// 0%   {left:900px; opacity: 0;}
-// 100% {left:800px; opacity: 1;}
-// }
+@keyframes moveingball5
+{
+0%   {left:900px; opacity: 0;}
+100% {left:460px; opacity: 1;}
+}
+
+@keyframes moveingball6
+{
+0%   {left:-200px; opacity: 0;}
+100% {left:0px; opacity: 1;}
+}
+
+@keyframes moveingball6-btn
+{
+0%   {left:-200px; opacity: 0;}
+100% {left:50px; opacity: 1;}
+}
+
+@keyframes moveingball7
+{
+0%   {left:900px; opacity: 0;}
+100% {left:500px; opacity: 1;}
+}
+
+@keyframes moveingball7-btn
+{
+0%   {left:900px; opacity: 0;}
+100% {left:800px; opacity: 1;}
+}
 
 
 
@@ -372,3 +391,38 @@
   0% { background-color: #ccc; left: 0px; -webkit-transform: rotate(0deg);}
   100% { background-color: #ff0000; left: 800px; -webkit-transform: rotate(360deg);}
 }
+
+
+// ioasdjsadasijdasiojdsaio*****************************************
+
+// body {
+//   overflow: hidden;
+//   perspective: 1000px;
+// }
+// 
+//
+// .funky-show-hide.ng-hide-add {
+//   transform: rotateZ(0);
+//   transform-origin: right;
+//   transition: all 0.5s ease-in-out;
+// }
+//
+// .funky-show-hide.ng-hide-add.ng-hide-add-active {
+//   transform: rotateZ(-135deg);
+// }
+//
+// .funky-show-hide.ng-hide-remove {
+//   transform: rotateY(90deg);
+//   transform-origin: left;
+//   transition: all 0.5s ease;
+// }
+//
+// .funky-show-hide.ng-hide-remove.ng-hide-remove-active {
+//   transform: rotateY(0);
+// }
+//
+// .check-element {
+//   border: 1px solid black;
+//   opacity: 1;
+//   padding: 10px;
+// }

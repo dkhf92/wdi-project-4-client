@@ -9,6 +9,8 @@ function TeamsIndexCtrl(Team, CurrentUserService, $state, filterFilter, $rootSco
   // vm.delete = teamsDelete;
   // vm.teams = Team.query();
 
+  vm.button = 'b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f4 dib no-underline';
+
   Team
   .query()
   .$promise
