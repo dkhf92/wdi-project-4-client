@@ -1,11 +1,16 @@
 body {
   // font-family: 'Bubbler One', sans-serif;
   font-family: 'BenchNine', sans-serif;
-  background: grey;
+  // background: grey;
+  // background: #b66662;
+  // background: #a90f1d;
+  // background: url(https://media.giphy.com/media/2HavnYT1BfENa/giphy.gif);
+  background: url(http://img.fifa.com/mm/photo/classic/general/02/34/65/90/2346590_full-lnd.jpg);
   // background: url(https://media.giphy.com/media/12Vujj7Zh7dTPy/giphy.gif);
-  // background: cover;
-  // background-size: contain;
+  background: cover;
+  background-size: contain;
   // background: url(https://media.giphy.com/media/Ku3vv22AHSXte/giphy.gif);
+
   // background: white; /* For browsers that do not support gradients */
   // background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
   // background: -o-linear-gradient(black, white); /* For Opera 11.1 to 12.0 */
@@ -16,6 +21,7 @@ body {
   text-align: center;
   &:hover {
     background: url(https://media.giphy.com/media/12Vujj7Zh7dTPy/giphy.gif);
+    // background: url(http://img.fifa.com/mm/photo/classic/general/02/34/65/90/2346590_full-lnd.jpg);
     // background: cover;
   }
 }
