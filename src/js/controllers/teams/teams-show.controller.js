@@ -26,7 +26,8 @@ function TeamsShowCtrl(Team, $state, $stateParams){
   };
 
   vm.accept = function(request) {
-    Team.accept({ team_id: request.team_id, id: request.id })
+    console.log(vm.teams.id);
+    Team.accept({ team_id: vm.teams.id, id: request.id })
     .$promise
     .then(data => {
       console.log(data);
@@ -50,7 +51,7 @@ function TeamsShowCtrl(Team, $state, $stateParams){
   //     vm.requested = requested;
   //   });
   // }
-  // 
+  //
   // vm.accept = function(request) {
   //   Team.accept({ team_id: request.team_id, id: request.id })
   //   .$promise
@@ -68,7 +69,7 @@ function TeamsShowCtrl(Team, $state, $stateParams){
   // };
 
   vm.reject = function(request) {
-    Team.reject({ team_id: request.team_id, id: request.id })
+    Team.reject({ team_id: vm.teams.id, id: request.id })
     .$promise
     .then(data => {
       console.log(data);

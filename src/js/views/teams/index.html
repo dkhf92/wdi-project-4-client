@@ -5,12 +5,12 @@
     <!-- <p>{{ team.description}}</p> -->
     <a ui-sref="teamsShow({ id: team.id })"><img ng-src="{{ team.image }}" style="margin:auto;"></a>
     <div class="caption pt3">
-      <a ng-class="teams.button" ui-sref="teamsShow({ id: team.id })">Apply</a>
+      <a ng-class="teams.button" class="button"  ui-sref="teamsShow({ id: team.id })">Apply</a>
     </div>
   </div>
 </div>
 
-<a class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f3 dib createTeam" ui-sref="teamsNew">Create a Team</a>
+<a class="button b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f4 dib createTeam" ui-sref="teamsNew">Create a Team</a>
 
 
 <!-- <h3 class="ttc white">These are the teams you have requested to join:</h3>
