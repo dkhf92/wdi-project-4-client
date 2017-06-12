@@ -6,6 +6,9 @@
   "scripts": {
     "postinstall": "bower install && gulp deploy"
   },
+  "engines": {
+    "node": ">=7.x"
+  },
   "author": "Alex Chin <alex@alexchin.co.uk>",
   "license": "ISC",
   "gulp": {
