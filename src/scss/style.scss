@@ -4,3 +4,52 @@
 @import "animation";
 @import "structure";
 @import "buttons";
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: green;
+}
+
+.homepage {
+  width: 100%;
+  height: 100vh;
+}
+
+.centered {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+  img {
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  button {
+    padding: 10px 15px;
+    border: none;
+    font-size: 20px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+
+    &:hover {
+      background: rgba(0,0,0,0.4);
+    }
+  }
+}
+
+.team-inner {
+  background: #2E933C;
+}

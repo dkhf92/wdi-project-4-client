@@ -1,15 +1,15 @@
 <form ng-submit="login.login()" class="measure center">
   <h1>Login</h1>
   <div class="mt3">
-    <label class="db fw6 lh-copy f6" for="email-address">Email</label>
-    <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email"  id="email" ng-model="login.user.email" placeholder="Email">
+    <label class="db fw6 lh-copy f3 white" for="email-address">Email</label>
+    <input class="pa3 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email"  id="email" ng-model="login.user.email">
   </div>
   <div class="mv3">
-    <label class="db fw6 lh-copy f6" for="password">Password</label>
-    <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  id="password" ng-model="login.user.password" placeholder="Password">
+    <label class="db fw6 lh-copy f3 white" for="password">Password</label>
+    <input class="pa3 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  id="password" ng-model="login.user.password">
   </div>
-  <input class="button b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib apply-btn" type="submit" value="Submit">
+  <input class="button grow pointer" type="submit" value="Submit">
 </form>
 <div class="mv3 measure center">
-    <p>Don't have an account? <a ui-sref="register" class="button f4 link dim black">Sign up here</a></p>
+    <p>Don't have an account? <a ui-sref="register" class="button grow">Sign up here</a></p>
 </div>

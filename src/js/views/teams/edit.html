@@ -2,19 +2,19 @@
 <h1>Edit Team here</h1>
 <form ng-submit="teams.update()" class="measure center" name="teamsEdit.editForm">
   <div class="mt3">
-    <label class="db fw6 lh-copy f6" for="name">Name</label>
+    <label class="db fw6 lh-copy f5 white" for="name">Name</label>
     <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="name" id="name" ng-model="teams.team.name" placeholder="Name">
   </div>
   <div class="mv3">
-    <label class="db fw6 lh-copy f6" for="description">Description</label>
+    <label class="db fw6 lh-copy f5 white" for="description">Description</label>
     <textarea id="description" name="description" ng-model="teams.team.description" class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" placeholder="Write description of team here"></textarea>
   </div>
   <div class="mv3">
-    <label class="db fw6 lh-copy f6" for="Image">Image</label>
+    <label class="db fw6 lh-copy f5 white" for="Image">Image</label>
     <input class="pl pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="image" ng-model="teams.team.image" placeholder="Paste Image address here">
   </div>
   <div class="mv3">
-    <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Update Team">
-    <a class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" ui-sref="teams">Back</a>
+    <input class="button pointer" type="submit" value="Update Team">
+    <a class="button pointer" ui-sref="teams">Back</a>
   </div>
 </form>

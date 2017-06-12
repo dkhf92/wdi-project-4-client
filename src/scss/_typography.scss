@@ -1,26 +1,48 @@
-a {
-  color: black;
+.button {
+  padding: 10px 15px;
+  border: none;
+  font-size: 20px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+  color: #fff;
+  text-shadow: 1px 1px 1px black, 0 0 1px black, 0 0 1px black;
+  &:hover {
+    background: rgba(0,0,0,0.4);
+  }
 }
-
+.form {
+  text-transform: uppercase;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
 p {
   font-size: 25px;
-  color: #91baba;
+  color: #fff;
+  // text-shadow: 1px 1px 1px black, 0 0 1px black, 0 0 1px black;
 }
-
 ul {
   list-style-type: none;
 }
 
 h1 {
-  color: #91baba;
-  text-shadow: 1px 1px 2px #b66662, 0 0 25px #b66662, 0 0 5px #b66662;
+  // color: #91baba;
+  color: #fff;
+  text-shadow: 1px 1px 1px black, 0 0 5px black, 0 0 5px black;
   text-align: center;
   font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: 25px;
-  color: #91baba;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px black, 0 0 1px black, 0 0 1px black;
+  color: #fff;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .ng-message-error p {
@@ -33,12 +55,13 @@ h3 {
 }
 
 .navbar {
-  background: #6CAE75;
   width: 100%;
+  a {
+    font-size: 25px;
+    text-transform: uppercase;
+  }
 }
 
-// .nav-link {
-//   &:hover {
-//     background: #b66641;
-//   }
-// }
+.navbartop {
+  float: right;
+}

@@ -1,7 +1,7 @@
 <h1>{{ teams.teams.name }}</h1>
 <!-- <div class="measure center fl w-100 w-40-ns pa4 pt1 cf bg-white relative br3"> -->
 <div class="dib pa1">
-  <div class="requests fl w-1 ph2 pv4 bg-white team-inner">
+  <div class="requests fl w-1 ph2 pv4 bg-green team-inner">
     <p>Team Captain: {{ teams.teams.creator.username }}</p>
     <img class="" ng-src="{{ teams.teams.image }}" style="margin:auto;">
     <p>{{ teams.teams.description }}</p>
@@ -14,7 +14,7 @@
   </div>
 
   <div class="dib pa1 ml1">
-    <div class="fl requests w-1 ph2 pv4 bg-white">
+    <div class="fl requests w-1 ph2 pv4 team-inner">
       <p>These players have requested to join:</p>
       <ul>
         <li ng-repeat="request in teams.teams.requests track by $index" ng-hide="request.status === 'accepted' || request.status === 'rejected'">
@@ -28,7 +28,7 @@
   </div>
 
   <div class="dib pa1">
-    <div class="fl requests w-1 ph2 pv4 bg-white">
+    <div class="fl requests w-1 ph2 pv4 team-inner">
       <p>Team players: </p>
       <ul>
         <li ng-repeat="user in teams.teams.users track by $index">

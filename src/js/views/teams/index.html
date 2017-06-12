@@ -1,25 +1,11 @@
 <h1>Teams</h1>
 <div class="fl w-100 w-50-m w-25-ns pa1" ng-repeat="team in teams.teams">
-  <div class="requests fl w-1 ph2 pv4 bg-white team-inner">
-    <a ui-sref="teamsShow({ id: team.id })"><h3 class="no-underline">{{ team.name }}</h3></a>
-    <!-- <p>{{ team.description}}</p> -->
+  <div class="requests fl w-1 ph2 pv4 bg-green team-inner">
+    <a ui-sref="teamsShow({ id: team.id })"><h3>{{ team.name }}</h3></a>
     <a ui-sref="teamsShow({ id: team.id })"><img ng-src="{{ team.image }}" style="margin:auto;"></a>
     <div class="caption pt3">
       <a ng-class="teams.button" class="button"  ui-sref="teamsShow({ id: team.id })">Apply</a>
     </div>
   </div>
 </div>
-
-<a class="button b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f4 dib createTeam" ui-sref="teamsNew">Create a Team</a>
-
-
-<!-- <h3 class="ttc white">These are the teams you have requested to join:</h3>
-<div class="fl w-100 dib" ng-show="teams.requested[0]">
-<div class="task fl w-100 w-50-m w-25-ns pa1" ng-repeat="team in teams.requested">
-<div class="fl w-1 ph2 pv4 bg-white task-inner">
-<a ui-sref="teamsShow({ id: team.id })"><h1>{{ team.name }}</h1></a>
-<img ng-src="{{ team.image }}" style="margin:auto;">
-<div class="caption pt3">
-<a class="f6 link dim br2 ba ph3 pv2 dib apply-btn" ui-sref="teamsShow({ id: team.id })">More</a>
-</div>
-</div> -->
+<a class="button b ph3 pv2 grow pointer f4 dib createTeam" ui-sref="teamsNew">Create a Team</a>
