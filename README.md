@@ -1,6 +1,6 @@
 <h4>My fourth project for WDI in London.</h4>
 
-<img src ="https://raw.githubusercontent.com/dkhf92/wdi-project-4-client/master/src/images/Screen%20Shot%202017-06-21%20at%2014.19.12.png">
+<img src ="https://raw.githubusercontent.com/dkhf92/wdi-project-4-client/master/src/images/Screen%20Shot%202017-06-21%20at%2014.51.31.png">
 
 <h3>Introduction</h3>
 
